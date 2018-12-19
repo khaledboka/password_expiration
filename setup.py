@@ -1,9 +1,10 @@
 from setuptools import setup
+from setuptools import find_packages
 
 setup(
     name='password_expiration',
     version='0.1',
-    # packages=['', 'migrations'],
+    packages=find_packages(),
     url='',
     license='GPL',
     author='Ahmed Nour Eldeen',
