@@ -11,7 +11,7 @@ from django.utils import timezone
 
 class PasswordExpiration(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
-    expiration_date = models.DateTimeField(null=False, blank=False, default=timezone.now())
+    expiration_date = models.DateTimeField(null=False, blank=False, default=timezone.now)
 
     def expired(self):
         return self.expiration_date <= timezone.now()
